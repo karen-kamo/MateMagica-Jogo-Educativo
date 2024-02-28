@@ -1,4 +1,5 @@
-# MateMagica - Jogo Educativo
+<img src="./imgs/logo.png"> 
+
 <p> O projeto MateMágica foi desenvolvido no TCC do nosso curso de Informática. </p>
 <br>
 
