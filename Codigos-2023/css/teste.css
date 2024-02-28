@@ -1,0 +1,243 @@
+/* Tela do jogo */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "VT323";
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.mainJogo{
+    background-image: url(../images/fundos/fundo-mundo1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 2vh;
+    padding-bottom: 11vh;
+}
+
+.index{
+    background-image: url(../images/fundos/fundo-roxo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jogo{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.barraVida img{
+    width: 9vh;
+}
+.barraTempo{
+    font-size: 5vh;
+    color: #000;
+    border: solid 7px rgb(130, 130, 130);
+    padding: 0.5vh 4vh;
+    background-color: #cdcdcd;
+    border-radius: 100%;
+}
+
+.barraExpressao{
+    font-size: 7.5vh;
+    color: #FFF;
+    background-color: rgb(174, 121, 71);
+    border-radius: 0.5rem;
+    border:rgb(57, 40, 24) dashed 7px;
+}
+
+.barraAlternativas {
+    text-align: center;
+    padding: 5.5vh 0;
+    background-color: gray;
+}
+
+.alternativas, .certo{
+    text-align: center;
+    padding: 0 14vh;
+    font-size: 6vh;
+    border-radius: 0.5rem;
+    background-color: #FFF;
+}
+
+.personagens{
+    width: 50%;
+}
+
+.btn-voltar{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 3vh;
+    border: #cdcdcd solid 5px;
+    border-radius: 0.5rem;
+    background-color: #cdcdcd;
+    color: #FFF;
+    padding: 0.3rem;
+    position: fixed;
+    top: 2.5vh;
+    right: 1.2vh;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-jogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50%;
+    font-size: 4.5vh;
+    padding: 5vh 5vh;
+    background-color: rgb(230, 206, 129);
+    border-radius: 5px;
+    border: 5px dashed #685319;
+}
+
+.modal-jogo a{
+    text-decoration: none;
+    color: #FFF;
+    border: 5px dashed #685319;
+    background-color: #9c7d26;
+    padding: 1vh 1.5vh;
+    border-radius: 5px;
+    margin: 1vh;
+}
+
+.botaoesModal{
+    margin-top: 8vh;
+}
+
+
+/* Tela index */
+.logo{
+    width: 30vw;
+}
+
+.area-final{
+    padding: 0 2vh;
+    background-color: #b691ff;
+}
+
+.area-final a{
+    text-decoration: none;
+    font-size: 4vh;
+    padding: 1vh;
+    border-radius: 0.5rem;
+    border: solid #FFF 2px;
+    background: rgb(57,6,96);
+    background: linear-gradient(0deg, rgba(57,6,96,1) 12%, rgba(107,67,172,1) 100%); 
+    color: #FFF;
+}
+
+.btn-loja{
+    margin-right: 1vh;
+}
+
+.modal-fase {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 30%;
+    font-size: 4vh;
+    padding: 1.5vh 3vw;
+    background-color: rgb(141, 108, 165);
+    border-radius: 5px;
+    border: 5px dashed #54196f;
+}
+
+.barraFase{
+    margin: 3vh 0;
+}
+
+.barraFase a{
+    text-decoration: none;
+    color: #FFF;
+    border: 5px dashed #685319;
+    background-color: #9c7d26;
+    padding: 2vh 2vw;
+    border-radius: 5px;
+    margin: 1vh 1vw;
+}
+
+.modal .linhaModal{
+    border-bottom: #515151 2px dashed;
+}
+
+.modal .linhaModal p{
+    margin-bottom: 0;
+}
+
+.sairModal{
+    height: 2.5vh;
+    background-color: none;
+}
+
+.area-final .btn-usuario{
+    width: 3vw;
+}
+
+.area-final .btn-sair{
+    width: 1.5vw;
+}
+
+.area-final .btn-sacola{
+    width: 3vw;
+}
+
+main{
+    margin-top: 25vh;
+    text-align: center;
+}
+.carrossel img{
+    width: 30vw;
+}
+
+.carrossel {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.itens {
+    display: flex;
+    overflow: hidden;
+}
+
+.item {
+    flex: 0 0 100%;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.item.active {
+    opacity: 1;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.seta.anterior {
+    left: 0;
+}
+
+.seta.seguinte {
+    right: 0;
+}

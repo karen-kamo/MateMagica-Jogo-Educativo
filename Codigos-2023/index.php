@@ -1,0 +1,173 @@
+<?php
+session_start();
+require("logica-autenticacao.php");
+
+if (!autenticado()) {
+    $_SESSION["restrito"] = true;
+    redireciona(("protecao.php"));
+    die();
+}
+
+require "conexao.php";
+
+
+$id = $_SESSION["usuario_id"];
+
+$sql = "SELECT quantmoedas_usu FROM usuario WHERE id_usu = ?";
+$stmt = $conn->prepare($sql);
+$stmt->execute([$id]);
+
+$usuario = $stmt->fetch();
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+    <link rel="shortcut icon" type="imagex/png" href="./images/icones/icone.png">
+    
+    <link rel="stylesheet" href="./css/estilo.css"/>
+
+    <title>MateMágica</title>
+</head>
+<body class="index">
+    <audio autoplay loop>
+        <source src="audios/musicaSelecao.wav" type="audio/mpeg">
+        Seu navegador não suporta áudio tag.
+    </audio> 
+
+    <header>
+        <div class="row p-3 fixed-top text-center">
+            <div class="col"></div>
+            <div class="col">
+                <img src="./images/logo.png" alt="" class="logo">
+            </div>
+            <div class="col"></div>
+        </div>
+    </header>
+
+    <main class="mainCarrossel">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 3"></button>
+
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="img-container">
+                  <img src="images/mundos/mundoVermelho.png" alt="..." class="img-mundoVermelho mundo">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>+ Mundo da Adição + </h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="img-container">
+                  <img src="images/mundos/mundoLaranja.png" alt="..." class="img-mundoLaranja mundo">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>- Mundo da Subtração -</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="img-container">
+                  <img src="images/mundos/mundoAmarelo.png" alt="..." class="img-mundoAmarelo mundo">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>x Mundo da Multiplicação x</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="img-container">
+                  <img src="images/mundos/mundoVerde.png" alt="..." class="img-mundoVerde mundo">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>+ Mundo da Adição e Subtração -</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="img-container">
+                  <img src="images/mundos/mundoAzul.png" alt="..." class="img-mundoAzul mundo">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>: Mundo da Divisão :</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="img-container">
+                  <img src="images/mundos/mundoRoxo.png" alt="..." class="img-mundoRoxo mundo">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>+- Mundo da Adição, Subtração e Multiplicação x</h1>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <img src="./images/icones/esquerda.png" alt="" class="seta">
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <img src="./images/icones/direita.png" alt="" class="seta">
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+        
+        <div class="modalFase modal">
+            <div class="modalConteudoFase">
+                <div class="d-flex justify-content-between linhaModal">
+                    <p class="modalNomeFase">Mundo Sei lá</p>
+                    <a>
+                        <img src="./images/icones/fechar.png" alt="" class="sairModal">
+                    </a>
+                </div>
+                <div class="d-flex justify-content-evenly barraFase">
+                    <a href="./tela.php">1</a>
+                    <a href="./tela.php">2</a>
+                    <a href="./tela.php">3</a>
+                </div>
+            </div>
+        </div>
+
+
+    <footer class="fixed-bottom area-final p-3">
+        <div class="row">
+            <div class="col">
+                <a href="./sair.php" class="btn-sair mx-5 px-4" onclick="if(!confirm('Tem certeza que deseja sair da conta?')) return false;"> 
+                  Sair 
+                  <img src="./images/icones/sair.png" alt="" class="btn-sair">
+                </a>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <a href="./loja.php" class="btn-loja mx-5 px-4"> 
+                  Loja
+                  <img src="./images/icones/sacola.png" alt="" class="btn-sacola">                   
+                </a>
+                
+                <div class="mx-3 areaMoeda">
+                  <p> <?= $usuario["quantmoedas_usu"] ?> </p>
+                  <img src="./images/icones/quantMoeda.png" alt="" class="iconeMoeda mx-2">  
+                </div>
+                
+                <a href="./form-alterar.php">
+                  <img src="./images/icones/usuario.png" alt="" class="btn-usuario">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>    
+    <script src="./js/funcoesOperacao.js"></script>
+    <script src="./js/funcoesInicial.js"></script>
+</body>
+</html>
