@@ -1,16 +1,22 @@
-<img src="./imgs/logo.png"> 
-
-<p> O projeto MateMágica foi desenvolvido no TCC do nosso curso de Informática. </p>
+<div align="center">
+  <img src="./imgs/logo.png"> 
+</div>
 <br>
 
-## Proposta do jogo
+# Proposta do jogo educativo
 <p> O jogo é voltado, basicamente, para a prática das quatro operações básicas da Matemática (adição, subtração, multiplicação e divisão).  
-  Desenvolvemos o jogo aplicando o conceito de gamificação, para tornar o software o mais lúdico e divertido possível. </p>
+  Desenvolvemos o jogo aplicando o conceito de <strong> gamificação</strong>, para tornar o software o mais lúdico e divertido possível. </p>
 <br>
 
-## Linguagens utilizadas 
+# Ferramentas utilizadas
+<p align="start">
+    <a href="">
+      <img src="https://skillicons.dev/icons?i=html,css,javascript,php,bootstrap,postgres,vscode" />
+    </a>
+</p>
 <br>
 
+# Layout 
 ## Mundo da Adição
 <img src="./imgs/mun1.png"> 
 <img src="./imgs/jog1.png"> 
@@ -44,3 +50,5 @@
 ## Mundo da Adição, Subtração e Multiplicação
 <img src="./imgs/mun6.png"> 
 <img src="./imgs/jog6.png"> 
+
+
