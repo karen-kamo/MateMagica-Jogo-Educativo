@@ -1,0 +1,429 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Tela do jogo */
+.mainJogo{
+    background-position: bottom;
+    padding-top: 2vh;
+    padding-bottom: 11vh;
+}
+
+.mundoVermelho{
+    background-image: url(../images/fundos/fundoVermelho.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mundoLaranja{
+    background-image: url(../images/fundos/fundoLaranja.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mundoAmarelo{
+    background-image: url(../images/fundos/fundoAmarelo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mundoVerde{
+    background-image: url(../images/fundos/fundoVerde.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mundoAzul{
+    background-image: url(../images/fundos/fundoAzul.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mundoRoxo{
+    background-image: url(../images/fundos/fundoRoxo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jogo{
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "VT323";
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.barraVida img{
+    width: 9vh;
+}
+.barraTempo{
+    font-size: 6.5vh;
+    color: #000;
+    border: solid 7px rgb(130, 130, 130);
+    padding: 0.5vh 4vh;
+    background-color: #cdcdcd;
+    border-radius: 100%;
+}
+
+.barraExpressao{
+    font-size: 7.5vh;
+    color: #FFF;
+    background-color: rgb(174, 121, 71);
+    border-radius: 0.5rem;
+    border:rgb(57, 40, 24) dashed 7px;
+}
+
+.barraAlternativas {
+    text-align: center;
+    padding: 5.5vh 0;
+    background-color: gray;
+}
+
+.alternativas, .certo{
+    text-align: center;
+    padding: 0 14vh;
+    font-size: 6vh;
+    border-radius: 0.5rem;
+    background-color: #FFF;
+}
+
+.personagens{
+    width: 50%;
+}
+
+.btn-voltar{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 3vh;
+    border: #cdcdcd solid 5px;
+    border-radius: 0.5rem;
+    background-color: #cdcdcd;
+    color: #FFF;
+    padding: 0.3rem;
+    position: fixed;
+    top: 2.5vh;
+    right: 1.2vh;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modalConteudoJogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    font-size: 4.5vh;
+    padding: 5vh 5vh;
+    background-color: rgb(230, 206, 129);
+    border-radius: 5px;
+    border: 5px dashed #685319;
+}
+
+.modalConteudoJogo a{
+    text-decoration: none;
+    color: #FFF;
+    border: 5px dashed #685319;
+    background-color: #9c7d26;
+    padding: 1vh 1.5vh;
+    border-radius: 5px;
+    margin: 1vh;
+}
+
+.botaoesModal{
+    margin-top: 8vh;
+}
+
+.modalConteudoJogo img{
+    height: 10vh;
+}
+
+/* Tela index */
+.index{
+    background: url(../images/fundos/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "VT323";
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.logo{
+    width: 30vw;
+}
+
+.area-final{
+    padding: 0 2vh;
+}
+
+.area-final a{
+    text-decoration: none;
+    font-size: 4vh;
+    padding: 1vh;
+    border-radius: 0.5rem;
+    border: solid #FFF 2px;
+    background: rgb(57,6,96);
+    background: linear-gradient(0deg, rgba(57,6,96,1) 12%, rgba(107,67,172,1) 100%); 
+    color: #FFF;
+}
+
+.area-final a:hover{
+    background: rgb(29, 3, 49);
+    background: linear-gradient(0deg, rgba(29,3,49,1) 12%, rgb(89, 58, 138) 100%); 
+    border: solid #d0d0d0 2px;
+}
+.btn-loja{
+    margin-right: 1vh;
+}
+
+.img-mundo{
+    width: 30vw;
+    margin-top: 20vh;
+}
+
+.modalConteudoFase {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 30%;
+    font-size: 4vh;
+    padding: 1.5vh 3vw;
+    background-color: rgb(141, 108, 165);
+    border-radius: 5px;
+    border: 5px dashed #54196f;
+}
+
+.barraFase{
+    margin: 3vh 0;
+}
+
+.barraFase a{
+    text-decoration: none;
+    color: #FFF;
+    border: 5px dashed #685319;
+    background-color: #9c7d26;
+    padding: 2vh 2vw;
+    border-radius: 5px;
+    margin: 1vh 1vw;
+}
+
+.modalFase .linhaModal{
+    border-bottom: #515151 2px dashed;
+}
+
+.modalFase .linhaModal p{
+    margin-bottom: 0;
+}
+
+.sairModal{
+    height: 2.5vh;
+    background-color: none;
+}
+
+.area-final .btn-usuario{
+    width: 3vw;
+}
+
+.area-final .btn-sair{
+    width: 1.5vw;
+}
+
+.area-final .btn-sacola{
+    width: 3vw;
+}
+
+.mainCarrossel{
+    margin-top: 5vh;
+    text-align: center;
+}
+.carousel-item img{
+    text-align: center;
+    margin-top: 11vh;
+    width: 35vw;
+}
+
+.seta {
+    height: 12vh;
+}
+
+.areaMoeda{
+    font-size: 4.7vh;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.areaMoeda .iconeMoeda{
+    height: 5vh;
+}
+
+.img-container{
+    overflow: hidden;
+}
+
+.img-container img{
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+}
+ 
+ .img-container:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*Tela da loja */
+.loja{
+    background-image: url(../images/fundos/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "VT323";
+    overflow-x: hidden;
+}
+
+.btn-voltarLoja{
+    color: #FFF;
+    position: relative;
+    font-size: 4vh;
+    text-decoration: none;
+}
+
+.btn-voltarLoja img{
+    width: 5.5vh;
+} 
+
+.btn-voltarLoja:hover{
+    color: #cecdcd;
+}
+
+.caixaRoupas{
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    background-color: rgb(195, 144, 78);
+    padding: 3vh 3vw;
+    border-radius: 5px;
+    font-size: 4vh;
+    border: #f3e3b8 5px dashed;
+}
+
+.caixaRoupas .item{
+    margin: 2vh 2vw;
+    background-color: #685319;
+    border-radius: 5px;
+    padding: 3vh 1vw;
+    border: #3b2f0e 5px dashed;
+}
+
+.caixaRoupas .item p{
+    color: #FFF;
+}
+
+.caixaRoupas .item img{
+    padding-bottom: 2vh;
+    border-bottom: #FFF 3px solid;
+}
+
+.caixaRoupas a{
+    text-decoration: none;
+    background-color: #eccb71;
+    border: 1px #eccb71 solid;
+    border-radius: 5px;
+    padding: 0.5vh 0.5vw;
+    color: #463315;
+}
+
+.areaMoedaLoja{
+    font-size: 4.7vh;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.areaMoedaLoja .iconeMoeda{
+    height: 5vh;
+}
+
+.areaMoedaLoja p{
+    padding-top: 1.5vh;
+}
+
+/*Tela de escolha do username*/
+.modalEscolhaUser{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 2vh;
+    background-color: rgb(207, 178, 83);
+    border-radius: 5px;
+    border: 5px dashed #685319;
+}
+
+.modalEscolhaUser p {
+    font-size: 4.5vh;
+    color: #fefefe;
+    text-decoration: overline;
+    text-decoration-color: #685319;
+}
+
+.modalEscolhaUser span {
+    color: #745d15;
+}
+
+.modalEscolhaUser input, label {
+    font-size: 2.6vh;
+}
+
+.modalEscolhaUser button, .areaTutorial a{
+    text-decoration: none;
+    color: #FFF;
+    border: 5px dashed #685319;
+    background-color: #9c7d26;
+    padding: 1vh 1.5vh;
+    border-radius: 5px;
+    margin: 1vh;
+    font-size: 3.5vh;
+}
+
+/*Tela de tutorial*/
+.msgTutorial {  
+    margin: 5vh 0;
+    padding: 2vh 5vh;
+    background-color: rgb(207, 178, 83);
+    border-radius: 5px;
+    border: 5px dashed #685319;
+}
+
+.msgTutorial p {
+    text-indent: 2vw;
+    font-size: 3.5vh;
+    color: #463315;
+    text-align: justify;
+}
+
+.msgTutorial span{
+    font-weight: bold;
+}
+
+.imgCoruja {
+    width: 100%;
+}
+
+.areaTutorial a{
+    margin: 1vh 4vh;
+}
+
+.areaTutorial a img{
+    width: 3vh;
+}
